@@ -53,7 +53,8 @@ class Expense_Tracker():
 
 
 def main():
-    tracker = Expense_Tracker()
+    balance = float(input("Enter your initial balance: "))
+    tracker = Expense_Tracker(balance)
 
     while True:
         print("Expense Tracker Menu:")
