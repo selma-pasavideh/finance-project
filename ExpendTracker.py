@@ -50,7 +50,7 @@ def main():
             category = input("Enter the category: ")
             description = input("Enter the description: ")
             amount = float(input("Enter the amount: "))
-            expense = Expend(date, category, description, amount)
+            expense = Expense(date, category, description, amount)
             tracker.add_expense(expense)
             print("\nExpense added seccessfully")
 
