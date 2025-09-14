@@ -5,7 +5,7 @@ class Expend():
         self.description = description
         self.amount = amount
 
-class Expense_Tracke():
+class Expense_Tracker():
     def __init__(self):
         self.expenses = []
 
@@ -31,3 +31,5 @@ class Expense_Tracke():
     def total_expenses(self):
         total = sum(expense.amount for expense in self.expenses)
         print(f"Total Expenses: {total:.3f}T")
+
+
