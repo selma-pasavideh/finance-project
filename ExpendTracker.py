@@ -26,7 +26,7 @@ class Expense_Tracker():
         else:
             print("*** Expense List ***")
             for i, expense in enumerate(self.expenses, start=1):
-                print(f"{i}. Date: {expense.date}, Category: {expense.category}, Description: {expense.description}, Amount: {expense.amount:.2f}T")
+                print(f"{i}. Date: {expense.date}, Category: {expense.category}, Description: {expense.description}, Amount: {expense.amount:.3f}T")
 
     def total_expenses(self):
         total = sum(expense.amount for expense in self.expenses)
