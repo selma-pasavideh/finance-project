@@ -45,6 +45,11 @@ class Expense_Tracker():
             print(f"{i}. Date: {expense.date}, Category: {expense.category}, Description: {expense.description}, Amount: {expense.amount:,}T")
             print(f"Remaining Balance after this expense: {current_balance:,}T")
 
+    def view_remaining_balance(self):
+        print(f"Initial Balance: {self.initial_balance:,}T")
+        print(f"Final Remaining Balance: {self.balance:,}")
+
+
 
 
 def main():
