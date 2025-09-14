@@ -62,7 +62,9 @@ def main():
         print("2.Remove expense")
         print("3.view expense")
         print("4.Total expense")
-        print("5.Exit")
+        print("5.View expenses with balance")
+        print("6.View remaining balance")
+        print("7.Exit")
 
         choice = input("\nEnter your choice 1-5: ")
         if choice == "1":
@@ -85,6 +87,12 @@ def main():
             tracker.total_expenses()
 
         elif choice == "5":
+                tracker.view_expenses_with_balance()
+
+        elif choice == "6":
+                tracker.view_remaining_balance()
+
+        elif choice == "7":
             print("\n*** Goodbye for Now ***")
             break
 
