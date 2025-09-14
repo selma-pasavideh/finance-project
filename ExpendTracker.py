@@ -14,6 +14,7 @@ class Expense_Tracker():
 
     def add_expense(self, expense):
         self.expenses.append(expense)
+        self.balance -= expense.amount
 
     def remove_expense(self, index):
         if 0<= index <len(self.expenses):
