@@ -6,8 +6,10 @@ class Expense():
         self.amount = amount
 
 class Expense_Tracker():
-    def __init__(self):
+    def __init__(self, balance):
         self.expenses = []
+        self.balance = balance
+        self.initial_balance = balance
 
 
     def add_expense(self, expense):
