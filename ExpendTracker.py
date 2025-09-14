@@ -33,3 +33,44 @@ class Expense_Tracker():
         print(f"Total Expenses: {total:.3f}T")
 
 
+def main():
+    tracker = Expense_Tracker()
+
+    while True:
+        print("Expense Tracker Menu:")
+        print("1.Add expense")
+        print("2.Remove expense")
+        print("3.view expense")
+        print("4.Total expense")
+        print("5.Exit")
+
+        choice = input("\nEnter your choice 1-5: ")
+        if choice == "1":
+            date = input("Enter the date: ")
+            category = input("Enter the category: ")
+            description = input("Enter the description: ")
+            amount = float(input("Enter the amount: "))
+            expense = Expend(date, category, description, amount)
+            tracker.add_expense(expense)
+            print("\nExpense added seccessfully")
+
+        elif choice == "2":
+            index = int(input("Enter the expense index to remove: ")) - 1
+            tracker.remove_expense(index)
+
+        elif choice == "3":
+            tracker.view_expense()
+
+        elif choice == "4":
+            tracker.total_expenses()
+
+        elif choice == "5":
+            print("\n*** Goodbye for Now ***")
+            break
+
+        else:
+            print("Invalidchoice, please try again!")
+
+
+
+
