@@ -19,3 +19,11 @@ class Expense_Tracke():
             print("Expense removed!")
         else:
             print("Invalid expense inex.")
+
+    def view_expense(self):
+        if len(self.expenses) == 0:
+            print("No expenses found!")
+        else:
+            print("*** Expense List ***")
+            for i, expense in enumerate(self.expenses, start=1):
+                print(f"{i}. Date: {expense.date}, Category: {expense.category}, Description: {expense.description}, Amount: {expense.amount:.2f}T")
