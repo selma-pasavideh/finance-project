@@ -36,6 +36,16 @@ class Expense_Tracker():
         total = sum(expense.amount for expense in self.expenses)
         print(f"Total Expenses: {total:,}T")
 
+    def view_expenses_with_balance(self):
+        print(f"Initial Balance: {self.initial_balance:,}T")
+        current_balance = self.initial_balance
+
+        for i,expense in enumerate(self.expenses, start=1):
+            current_balance -= expense.amount
+            print(f"{i}. Date: {expense.date}, Category: {expense.category}, Description: {expense.description}, Amount: {expense.amount:,}T")
+            print(f"Remaining Balance after this expense: {current_balance:,}T")
+
+
 
 def main():
     tracker = Expense_Tracker()
