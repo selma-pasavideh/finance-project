@@ -18,7 +18,8 @@ class Expense_Tracker():
 
     def remove_expense(self, index):
         if 0<= index <len(self.expenses):
-            del self.expenses[index]
+            removed = self.expenses.pop(index)
+            self.balance += removed.amount
             print("Expense removed!")
         else:
             print("Invalid expense inex.")
